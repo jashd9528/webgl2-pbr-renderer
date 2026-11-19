@@ -1,0 +1,26 @@
+{
+  "name": "webgl2-pbr-renderer",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "WebGL2 real-time deferred PBR renderer: MRT G-Buffer, GGX BRDF, SSAO, SSR, ACES tone mapping",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "serve": "python -m http.server 5173"
+  },
+  "keywords": [
+    "webgl2",
+    "pbr",
+    "ggx",
+    "deferred-rendering",
+    "ssao",
+    "ssr",
+    "glsl"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}

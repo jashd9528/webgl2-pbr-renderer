@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGL2 Real-Time PBR Renderer</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <canvas id="viewport" width="1280" height="720"></canvas>
+
+    <aside id="hud">
+      <header>
+        <h1>WebGL2 PBR Renderer</h1>
+        <p class="sub">MRT G-Buffer · GGX BRDF · SSAO · SSR</p>
+        <div class="stats">
+          <span id="fps">--</span> fps
+          <span class="dot">·</span>
+          <span id="frame-ms">--</span> ms
+          <span class="dot">·</span>
+          <span id="res">--</span>
+        </div>
+      </header>
+
+      <div class="group">
+        <label class="row">
+          <span>Debug View</span>
+          <select id="debug-view">
+            <option value="0">Final (LDR)</option>
+            <option value="1">G-Buffer · Albedo</option>
+            <option value="2">G-Buffer · Normal</option>
+            <option value="3">G-Buffer · Depth</option>
+            <option value="4">G-Buffer · Rough / Metal</option>
+            <option value="5">SSAO</option>
+            <option value="6">SSR · Hit Mask</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="group">
+        <label class="row">
+          <span>Exposure</span>
+          <span class="val" data-for="exposure">1.10</span>
+        </label>
+        <input id="exposure" type="range" min="0.2" max="3" step="0.01" value="1.1" />
+
+        <label class="row">
+          <span>Sun Intensity</span>
+          <span class="val" data-for="sun">5.00</span>
+        </label>
+        <input id="sun" type="range" min="0" max="12" step="0.05" value="5" />
+
+        <label class="row">
+          <span>Ambient</span>
+          <span class="val" data-for="ambient">0.75</span>
+        </label>
+        <input id="ambient" type="range" min="0" max="2" step="0.01" value="0.75" />
+
+        <label class="row">
+          <span>Roughness Scale</span>
+          <span class="val" data-for="roughness">1.00</span>
+        </label>
+        <input id="roughness" type="range" min="0.2" max="2" step="0.01" value="1" />
+      </div>
+
+      <div class="group">
+        <label class="row check">
+          <span>SSAO</span>
+          <input id="ssao-enabled" type="checkbox" checked />
+        </label>
+        <label class="row">
+          <span>AO Strength</span>
+          <span class="val" data-for="ao-strength">1.00</span>
+        </label>
+        <input id="ao-strength" type="range" min="0" max="2" step="0.01" value="1" />
+
+        <label class="row check">
+          <span>SSR</span>
+          <input id="ssr-enabled" type="checkbox" checked />
+        </label>
+        <label class="row">
+          <span>SSR Strength</span>
+          <span class="val" data-for="ssr-strength">0.90</span>
+        </label>
+        <input id="ssr-strength" type="range" min="0" max="2" step="0.01" value="0.9" />
+      </div>
+
+      <div class="group">
+        <label class="row">
+          <span>Render Scale</span>
+          <span class="val" data-for="scale">1.00</span>
+        </label>
+        <input id="scale" type="range" min="0.5" max="1.5" step="0.05" value="1" />
+        <button id="screenshot">Save PNG</button>
+      </div>
+
+      <footer>
+        <span>拖拽旋转 · 滚轮缩放</span>
+      </footer>
+    </aside>
+
+    <pre id="log" hidden></pre>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
