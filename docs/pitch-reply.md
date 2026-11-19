@@ -8,8 +8,8 @@
 
 我按你们的要求把项目建成了公开仓库，代码可以本地运行，不是方案文档：
 
-**仓库**：https://github.com/&lt;你的账号&gt;/webgl2-pbr-renderer
-**在线演示**：https://&lt;你的账号&gt;.github.io/webgl2-pbr-renderer/ （可选）
+**仓库**：https://github.com/jashd9528/webgl2-pbr-renderer
+**在线演示**：https://jashd9528.github.io/webgl2-pbr-renderer/
 
 技术栈是原生 WebGL2 + GLSL ES 3.00，没有用 Three.js 之类的封装：
 
@@ -35,8 +35,8 @@
 
 I built the project as a public repo and it actually runs — it is not a proposal document:
 
-**Repo**: https://github.com/&lt;your-account&gt;/webgl2-pbr-renderer
-**Live demo**: https://&lt;your-account&gt;.github.io/webgl2-pbr-renderer/ (optional)
+**Repo**: https://github.com/jashd9528/webgl2-pbr-renderer
+**Live demo**: https://jashd9528.github.io/webgl2-pbr-renderer/
 
 Raw WebGL2 + GLSL ES 3.00, no Three.js or similar wrapper:
 

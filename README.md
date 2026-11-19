@@ -4,6 +4,9 @@
 
 > 一个可以直接在浏览器里跑、可以逐帧看到 G-Buffer 数据、可以读源码的项目，而不是几个孤立的 shader 片段。
 
+**在线演示**：https://jashd9528.github.io/webgl2-pbr-renderer/
+**仓库**：https://github.com/jashd9528/webgl2-pbr-renderer
+
 ![最终画面](docs/screenshots/01-final.png)
 
 ---
